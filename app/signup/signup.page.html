@@ -1,0 +1,58 @@
+
+<ion-card align="center">
+  <ion-card-title class="one">Sign Up</ion-card-title>
+  <form [formGroup]="profileForm" (ngSubmit)="onFormSubmit()">
+    <div class="sign">
+      <ion-card-header>
+        <ion-row>
+          <ion-card-subtitle>Already have an account?</ion-card-subtitle><a style="text-decoration:none"
+            [routerLink]="['/signin']">Sign In</a>
+        </ion-row>
+      </ion-card-header>
+      <ion-col>
+        <ion-row>
+          <ion-label>Email</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row> <input type="email" id="uname" class="form-control" formControlName="userName"
+            [(ngModel)]="SignupObj.userName">
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-label>Password</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row> <input type="password" id="pwd" class="form-control" formControlName="pwd"
+            [(ngModel)]="SignupObj.pwd">
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-label>Secret</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row> <input type="text" id="sKey" class="form-control" formControlName="sKey" [(ngModel)]="SignupObj.sKey">
+        </ion-row>
+      </ion-col></div>
+      <!-- <ion-col>
+        <ion-row> -->
+          <div align="left">
+          <ion-button color="primary"(click)="create()" class="btn">Sign Up</ion-button>
+          <ion-text>
+            <h1>By Clicking the "Sign Up" you are creating an<br>
+              account, and you agree to the Terms of Use
+            </h1>
+          </ion-text>
+        </div>
+        <!-- </ion-row>
+      </ion-col> -->
+
+      <i class="fa-solid fa-lock"></i>
+
+    
+  </form>
+</ion-card>

@@ -1,0 +1,44 @@
+<ion-card align="center">
+  <ion-card-title class="one">Sign In</ion-card-title>
+  <form [formGroup]="profileForm" (ngSubmit)="onFormSubmit()">
+    <div class="sign">
+      <ion-card-header>
+        <ion-row>
+          <ion-card-subtitle>Don't have an account?</ion-card-subtitle><a style="text-decoration:none"
+            [routerLink]="['/signup']">Sign Up</a>
+        </ion-row>
+      </ion-card-header>
+      <ion-col>
+        <ion-row>
+          <ion-label>Email</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row> <input type="email" id="uname" class="form-control" formControlName="userName"
+            [(ngModel)]="SigninObj.userName">
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-label>Password</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row> <input type="password" id="pwd" class="form-control" formControlName="pwd"
+            [(ngModel)]="SigninObj.pwd">
+
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row><a class="two" style="text-decoration:none" [routerLink]="['/fpwd']">Forgot your password?</a>
+        </ion-row>
+      </ion-col>
+    </div>
+    <div align="left">
+      <ion-button color="primary" class="btn" *ngIf="saveBtn"(click)="search()" [routerLink]="['/textarea']">Sign In</ion-button>
+    </div>
+    <i class="fa-solid fa-lock"></i>
+
+  </form>
+
+</ion-card>

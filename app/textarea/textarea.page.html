@@ -1,0 +1,26 @@
+<div>
+  <ion-text>
+    <h1>Would you like to share with world?
+    </h1>
+  </ion-text>
+  <ion-row>
+    <ion-col> <textarea></textarea></ion-col>
+    <ion-col class="btn">
+      <ion-button color="light" (click)="create()" >Submit</ion-button>
+    </ion-col>
+  </ion-row>
+</div>
+<div class="scroll">
+  <ion-row>
+    <ion-col><b>Comments</b>
+      <input type="text" class="form-control" formControlName="uCmt" [(ngModel)]="cmtObj.uCmt">
+    </ion-col>
+    <ion-col class="spc">
+      <ion-button color="light">Filter</ion-button>
+    </ion-col>
+  </ion-row>
+  <tr *ngFor="let comments of cmtArray;let i=index">
+    <td>{{comments.userName}}</td>
+    <td><textarea>{{comments.uCmt}}</textarea></td>
+  </tr>
+</div>

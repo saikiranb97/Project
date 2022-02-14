@@ -1,0 +1,33 @@
+<ion-card align="center">
+  <ion-card-title class="one">Forgot Password</ion-card-title>
+  <form [formGroup]="profileForm" (ngSubmit)="onFormSubmit()">
+    <div class="sign">
+      <ion-col>
+        <ion-row>
+          <ion-label>Email</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row> <input type="text" id="sKey" class="form-control" formControlName="sKey" [(ngModel)]="SigninObj.sKey">
+        </ion-row>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-label>Secret</ion-label>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <ion-row> <input type="password" id="pwd" class="form-control" formControlName="pwd"
+          [(ngModel)]="SigninObj.pwd">
+      </ion-col>
+    </div>
+    <div align="left">
+      <ion-button color="primary" (click)="update()" *ngIf="updateBtn" class="btn"[routerLink]="['/textarea']">Sign In</ion-button>
+    </div>
+    <i class="fa-solid fa-lock"></i>
+
+  </form>
+</ion-card>
